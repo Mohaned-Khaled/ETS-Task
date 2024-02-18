@@ -1,0 +1,64 @@
+<nav>
+  <div class="container justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+      <img src="../../../assets/Group 128516.svg" alt="e&">
+    </div>
+    <div class="content-container">
+      <ul class="d-flex">
+        <li>
+          <a class="active">Home <img src="../../../assets/arrow-down.svg" alt="arrow-down"></a>
+        </li>
+        <li>
+          <a>Company <img src="../../../assets/arrow-down.svg" alt="arrow-down"></a>
+        </li>
+        <li>
+          <a>Services & Industries <img src="../../../assets/arrow-down.svg" alt="arrow-down"></a>
+        </li>
+        <li>
+          <a>Insight <img src="../../../assets/arrow-down.svg" alt="arrow-down"></a>
+        </li>
+        <li>
+          <a>Careers</a>
+        </li>
+      </ul>
+      <div class="btn-container d-flex">
+        <button class="red-button fs16">Contact Us</button>
+      </div>
+      <div class="d-flex align-items-center" style="gap:14px">
+        <div class="search-container">
+          <img src="../../../assets/search (1).svg" alt="search-icon">
+        </div>
+        <p class="lang">EN <img src="../../../assets/arrow-down.svg" alt="arrow-down"></p>
+      </div>
+      <div class="responsive-menu">
+        <div class="menu-bar cusror-p" (click)="toggle()">
+          <img src="../../../assets/menu-bar.png" alt="">
+        </div>
+        <div *ngIf="showMenuContent">
+          <ol class="menu-content"   [ngClass]="showMenuContent ? 'slide-in' : 'slide-out'">
+            <li>
+              <a class="active">Home</a>
+            </li>
+            <li>
+              <a>Company</a>
+            </li>
+            <li>
+              <a>Services & Industries</a>
+            </li>
+            <li>
+              <a>Insight</a>
+            </li>
+            <li>
+              <a>Careers</a>
+            </li>
+            <li>
+              <a>Contact Us</a>
+            </li>
+          </ol>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</nav>

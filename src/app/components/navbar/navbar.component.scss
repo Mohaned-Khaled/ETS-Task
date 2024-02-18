@@ -1,0 +1,170 @@
+nav {
+  background-color: #252525;
+  height: 84px;
+}
+
+nav > div {
+  display: flex;
+  color: #FCFCFC;
+  height: 100%;
+  align-items: center;
+  position: relative;
+
+}
+
+.content-container {
+  display: flex;
+  gap: 30px;
+}
+
+ul {
+  gap: 30px;
+}
+
+ul li {
+  margin: auto 0;
+  font-size: 16px;
+}
+
+ul li a  {
+  display: flex;
+  gap: 4px;
+  cursor: pointer;
+  color: #FCFCFC;
+  opacity: .85;
+}
+
+ul li a.active {
+  color: white;
+  position: relative;
+  opacity: 1;
+}
+
+ul li a.active::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: #E00800;
+  left: 0;
+  bottom: -2px;
+}
+
+.btn-container button {
+  margin: auto;
+}
+
+.search-container {
+  width: 38px;
+  height: 36px;
+  border-radius: 10px;
+  background-color: #707070;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+}
+
+.search-container img {
+  background: #707070;
+}
+
+.lang {
+  display: flex;
+  gap: 4px;
+}
+
+.responsive-menu {
+  display: none;
+  align-items: center;
+
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-in-out;
+}
+
+.slide-out {
+  animation: slideOut 0.3s ease-in-out forwards;
+}
+
+.menu-content {
+  position: absolute;
+  right: 13px;
+  bottom: -353px;
+  background-color: #252525;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 10px;
+  width: 210px;
+  z-index: 1000;
+}
+
+.menu-content::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 11px solid;
+  border-color: transparent transparent #252525 transparent;
+  position: absolute;
+  right: 9px;
+  top: -20px;
+}
+
+.menu-content li a{
+  display: block;
+  padding: 13px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  opacity: .6;
+}
+
+.menu-content li a:hover {
+  opacity: 1;
+}
+
+.menu-bar {
+
+}
+
+.menu-bar img {
+  width: 30px;
+}
+
+@media screen and (max-width:989px) {
+  ul,
+  .btn-container {
+    display: none;
+  }
+
+  .responsive-menu {
+    display: flex;
+  }
+
+}
+
+
+

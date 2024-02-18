@@ -1,0 +1,141 @@
+.part-two {
+  background-color: #F9F9F8;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 50px;
+  padding: 44px 0 37px 0;
+  text-align: center;
+}
+
+.cards-cont {
+  box-shadow: 0px 0px 5px #00000029;
+  border-radius: 50px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 90px;
+  background-color: white;
+  margin-bottom: 30px;
+}
+
+.cards-cont .card {
+  width: calc(30%);
+  position: relative;
+  display: grid;
+}
+
+.card .card-header {
+  font-size: 20px;
+  padding: 0 4px;
+  border-radius: 50px;
+  position: relative;
+  z-index: 10;
+}
+
+.card-header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  filter: blur(9px);
+  -webkit-filter: blur(9px);
+  opacity: .7;
+  z-index: -1;
+}
+
+.card:first-of-type .card-header:before {
+  width: 15%;
+  background: transparent linear-gradient(270deg, #D5D5D5B3 0%, #DDB973 100%) 0% 0% no-repeat padding-box;
+}
+
+.card:nth-of-type(2) .card-header::before {
+  width: 30%;
+  background: transparent linear-gradient(90deg, #8CDAE2 0%, #D5D5DFB3 100%) 0% 0% no-repeat padding-box;
+}
+
+.card:nth-of-type(3) .card-header::before {
+  width: 40%;
+  background: transparent linear-gradient(90deg, #F9736E 0%, #DFDFDFB3 100%) 0% 0% no-repeat padding-box;
+}
+
+.card:nth-of-type(4) .card-header::before {
+  width: 40%;
+  background: transparent linear-gradient(90deg, #E2B78C 0%, #D5D5DFB3 100%) 0% 0% no-repeat padding-box;
+}
+
+.card:nth-of-type(5) .card-header::before {
+  width: 30%;
+  background: transparent linear-gradient(90deg, #9AE28C 0%, #E6E6E6B3 100%) 0% 0% no-repeat padding-box;
+}
+
+.card:nth-of-type(6) .card-header::before {
+  width: 80%;
+  background: transparent linear-gradient(90deg, #CC8CE2 0%, #DBDBDBB3 100%) 0% 0% no-repeat padding-box;
+}
+
+.card p {
+  color: #585A5C;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.card .res-content {
+  display: none;
+}
+
+.card a {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: bold;
+  margin-top: 50px;
+  font-size: 14px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+@media screen and (max-width:989px) {
+  .cards-cont {
+    row-gap: 40px;
+  }
+
+}
+
+@media screen and (max-width:764px) {
+  h1 {
+    font-size: 35px;
+    padding: 24px 0 17px 0;
+  }
+  .card .card-header {
+    font-size: 18px;
+  }
+
+  .cards-cont {
+    row-gap: 32px;
+  }
+
+  .cards-cont .card {
+    width: calc(40%);
+  }
+
+
+.card a {
+  margin-top: 20px;
+}
+
+
+}
+
+@media screen and (max-width:549px) {
+  .card .res-content {
+    display: block;
+  }
+
+  .card .full-content {
+    display: none;
+  }
+}

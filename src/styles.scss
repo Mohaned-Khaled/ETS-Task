@@ -1,1 +1,88 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  font-family: "Suisse Int'l";
+  box-sizing: border-box;
+}
+
+h1,h2,h3 {
+  margin: 0;
+}
+
+ul,ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fs16 {
+  font-size: 16px !important;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-content: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.cusror-p {
+  cursor: pointer !important;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.red-button {
+  background-color: #E00800;
+  color: white;
+  border-radius: 10px;
+  padding: 9px 15px;
+  border: 0;
+  cursor: pointer;
+}
+
+.white-button {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 9px 15px;
+  border: 0;
+  cursor: pointer;
+}
+
+/* Media query for responsiveness */
+@media (min-width: 576px) {
+  .container {
+    width: 100%;
+  }
+}

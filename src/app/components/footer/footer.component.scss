@@ -1,0 +1,131 @@
+footer {
+  background: transparent linear-gradient(180deg, #2D2C36 0%, #252626 66%, #252525 100%) 0% 0% no-repeat padding-box;
+  color: white;
+  min-height: 534px;
+  display: flex;
+  align-items: end;
+  padding-bottom: 50px;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.footer-content {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-content .my-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.my-col h3 {
+  font-size: 18px;
+}
+
+.my-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.my-col li a {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.policy {
+  padding: 10px 0;
+}
+
+.policy-content {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.policy-content p:first-child {
+  font-size: 12px;
+  color: #575A5C;
+  margin: 0;
+}
+
+.policy-content p:nth-child(2),
+.policy-content p:nth-child(3) {
+  font-size: 12px;
+  color: #0A0A0A;
+  font-weight: bold;
+  margin: 0;
+}
+
+.social-content {
+  font-size: 14px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  color: #575A5C;
+}
+
+.social-content p {
+  margin: 0;
+}
+
+@media screen and (max-width:989px) {
+  .policy {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .policy .container > div {
+    justify-content: center;
+    flex-direction: column;
+    gap: 11px;
+  }
+}
+
+
+@media screen and (max-width:764px) {
+  // .footer-content {
+  //   flex-wrap: wrap;
+  //   row-gap: 20px;
+  // }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    row-gap: 15px;
+  }
+
+  footer {
+    padding: 20px 10px;
+  }
+
+  // .my-col {
+  //   min-width: calc(33.3% - (6.66px));
+  //   align-items: center;
+  // }
+
+  // .my-col ul {
+  //   align-items: center;
+  // }
+
+  .img-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width:549px) {
+  // .my-col {
+  //   min-width: calc(50% - (5px));
+  // }
+}
